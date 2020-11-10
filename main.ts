@@ -1,4 +1,14 @@
-function ProgressBarAnimasyon (LedSirasi: number, LedSayisi: number, durum: boolean) {
+namespace progressBarLoadingAnimation
+{
+    //% blockId=progressBarAnimationLoading
+    //% block="progressBarBlock LedBaslangicSirasi=$LedSirasi, LedSiraSayisi=$LedSayisi, Durum=$durum"
+    //% LedSirasi.defl=1 LedSayisi.defl=3 durum.defl=true
+    //% LedSirasi.min=0 LedSirasi.max=4
+    //% LedSayisi.min=1 LedSayisi.max=5
+    //% color="#FA8072"
+
+export function ProgressBarAnimasyon (LedSirasi: number, LedSayisi: number, durum: boolean):void
+ {
     if (durum) {
         for (let satir = 0; satir <= 4; satir++) {
             for (let sutun = 0; sutun <= LedSayisi - 1; sutun++) {
@@ -10,7 +20,7 @@ function ProgressBarAnimasyon (LedSirasi: number, LedSayisi: number, durum: bool
                 led.setBrightness(55)
             }
         }
-        for (let index = 0; index < 4; index++) {
+        for (let index2 = 0; index2 < 4; index2++) {
             led.enable(false)
             basic.pause(100)
             led.enable(true)
@@ -24,3 +34,4 @@ basic.forever(function () {
     ProgressBarAnimasyon(2, 2, durum)
     durum = false
 })
+}
