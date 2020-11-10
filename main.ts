@@ -1,3 +1,5 @@
+
+//% color="#FF69B4" weight=100 icon="\uf110"
 namespace progressBarLoadingAnimation
 {
     //% blockId=progressBarAnimationLoading
